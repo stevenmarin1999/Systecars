@@ -1,64 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>SysteCars Inicio de sesión</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <header></header>
-    <main class="h-100 gradient-form" style="background-image: url(img/fondo.jpeg);">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-xl-10">
-                    <div class="card rounded-3 text-black">
-                        <div class="row g-0">
-                            <div class="col-lg-6">
-                                <div class="card-body p-md-5 mx-md-4">
-                                    <div class="text-center">
-                                        <img src="img/logo.png" alt="Logo de la empresa" style="width: 285px;">
-                                    </div>
-
-                                    <form id="loginForm">
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="username">
-                                                <img src="img/perfil.png" class="icono-usuario">
-                                                Usuario
-                                            </label>
-                                            <input type="email" id="username" class="form-control" placeholder="Ingresa tu usuario" />
-                                        </div>
-                                    
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="username">
-                                                <img src="img/contrasena.png" class="icono-usuario">
-                                                Usuario
-                                            </label>
-                                            <input type="email" id="username" class="form-control" placeholder="Ingresa tu contraseña" />
-                                        </div>
-                                    
-                                        <div class="text-center pt-1 mb-5 pb-1">
-                                            <button class="btn btn-success" type="submit">Iniciar Sesión</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2" style="background-image: url('img/autolujo.png'); background-repeat: no-repeat; background-size: contain; background-position: center;">
-                                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                </div>
-                            </div>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>Systecars</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="icon" type="image/x-icon" href="images/volante.png">
+   </head>
+ 
+   <body class="main-layout">
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <header>
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img src="images/logo.png" alt="#" width="100px" height="400px" /></a>
+                           </div>
                         </div>
-                    </div>
-                    <p style="text-align: center; color: aliceblue;">Autolujo © Autolujo S.A 2024. Derechos reservados. Versión 1.0</p>
-                </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li>
+                                 <a href="#" class="search-icon" data-toggle="modal" data-target="#searchModal">
+                                     <i class="fas fa-search"></i>
+                                 </a>
+                             </li>
+
+                             <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="searchModalLabel">Búsqueda rapida</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <form>
+                                              <div class="form-group">
+                                                  <label for="searchInput">Ingresa el numero de placa a consultar</label>
+                                                  <input type="text" class="form-control" id="searchInput" placeholder="XXX-XX">
+                                              </div>
+                                              <button type="submit" class="btn btn-success">Buscar</button>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                              <li class="nav-item active">
+                              <a class="nav-link" href="registro.html">Nuevo registro</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="conductores.html">Conductores</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="vehiculos.html">Vehiculos</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="propietarios.html">Propietarios</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#">Salir</a>
+                              </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
             </div>
-        </div>
-    </main>
-    <footer></footer>
-    <script src="main.js"></script>
-</body>
+         </div>
+      </div>
+   </header>
+      <section class="banner_main">
+         <div id="banner1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#banner1" data-slide-to="0" class="active"></li>
+               <li data-target="#banner1" data-slide-to="1"></li>
+               <li data-target="#banner1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="carousel-caption">
+                        <div class="text-bg">
+                           <h1> <span class="blu">Bienvenido <br></span>Informacion vehiculos</h1>
+                           <figure><img src="" alt="#"/></figure>
+                           <a class="read_more" href="/vehiculos.html">Consulta</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="carousel-caption">
+                        <div class="text-bg">
+                           <h1> <span class="blu">Bienvenido <br></span>Informacion Propietarios</h1>
+                           <figure><img src="images/banner_img.png" alt="#"/></figure>
+                           <a class="read_more" href="/propietarios.html">Consulta</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="carousel-caption">
+                        <div class="text-bg">
+                           <h1> <span class="blu">Bienvenido <br></span>Informacion conductores</h1>
+                           <figure><img src="images/banner_img.png" alt="#"/></figure>
+                           <a class="read_more" href="/conductores.html">Consulta</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+         </div>
+      </section>
+      <footer>
+         <div class="footer" style="background-repeat: no-repeat; background-position: center center; background-size: cover; background-image: url(images/Laboratorio.jpg);">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> Cra 8 No 11 – 51 Edificio SINTRAFEC, Chinchiná - Caldas</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>Copyright © 2024 Transportes Autolujo      .     Diseñado por: Steven Marin</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </html>
+
